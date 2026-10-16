@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapil Rai — Web Developer | Full Stack & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Kapil Rai, a Full Stack Web Developer & Computer Science (AI) student at Technocrats Institute of Technology, Bhopal. Experienced in MERN stack, REST APIs, and Generative AI.">
+  <meta name="keywords" content="Kapil Rai, Web Developer, MERN Stack, React.js, Node.js, AI, Bhopal, Portfolio">
+  <meta name="author" content="Kapil Rai">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Interactive 3D WebGL Plexus Canvas (Matching Reference Visual) -->
+ 
+
+  <!-- High-Performance Canvas for 240-Frame Scroll Animation -->
+  <canvas id="scroll-canvas" style="display: none;"></canvas>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Custom Cursor & Glow -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-glow"></div>
+
+  <!-- ==================== FIXED NAVIGATION BAR ==================== -->
+  <nav class="main-navbar" id="navbar">
+    <div class="nav-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-brand-logo">
+        <span class="logo-box">KR</span>
+        <div class="logo-text-group">
+          <span class="logo-name">KAPIL RAI</span>
+          <span class="logo-tag">WEB DEVELOPER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu-list">
+        <li><a href="#hero" class="nav-item active">Home</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#certifications" class="nav-item">Certifications</a></li>
+        <li><a href="#education" class="nav-item">Education</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions (Status, Engine Toggle, Theme Toggle & Resume Download) -->
+      <div class="nav-actions">
+        <div class="nav-hire-badge">
+          <span class="pulse-dot"></span>
+          <span class="hire-text">OPEN FOR WORK</span>
+        </div>
+
+        <!-- Separate Dedicated Theme Switch Button -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Bright / Dark theme" title="Switch Theme (Dark / Bright)">
+          <span class="theme-switch-pill">
+            <span class="theme-switch-icon icon-moon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </span>
+            <span class="theme-switch-icon icon-sun">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+            </span>
+          </span>
+          <span class="theme-btn-label" id="themeBtnLabel">DARK</span>
+        </button>
+
+        <a href="Kapil_Rai_Resume.pdf" download="Kapil_Rai_Resume.pdf" class="btn-nav-resume copyable-item" data-text="Kapil_Rai_Resume.pdf" title="Download Kapil Rai's Resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+          </svg>
+          <span>RESUME</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button class="mobile-engine-toggle" id="mobileVisualModeToggle">
+          <span id="mobileEngineIcon">🌐</span>
+          <span id="mobileEngineText">Switch to 240-Frame Mode</span>
+        </button>
+        <button class="mobile-theme-toggle" id="mobileThemeToggle">
+          <span id="mobileThemeIcon">🌙</span>
+          <span id="mobileThemeText">Switch to Bright Mode</span>
+        </button>
+        <a href="Kapil_Rai_Resume.pdf" download="Kapil_Rai_Resume.pdf" class="btn-mobile-cv">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" x2="12" y1="15" y2="3"/>
+          </svg>
+          <span>Download Resume (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN SITE CONTAINER ==================== -->
+  <div class="site-container">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- GIANT PORTFOLIO TITLE & ROTATING BADGE -->
+      <div class="hero-title-wrapper">
+        
+     <section class="hero">
+       <div class="hero-image">
+        <img src="Assests/kapilrai01.png" alt="My Profile">
+       </div>
+
+      <div class="hero-content">
+          <h1>Hi, I'm Kapil Rai</h1>
+           <h2>Web Developer</h2>
+           <p>I build modern and responsive websites.</p>
+      </div>
+      </section>
+
+        
+        <!-- Interactive Rotating Stamp Badge -->
+        <div class="rotating-badge-container" id="rotatingBadge" title="Click to spin!">
+          <svg class="rotating-badge-svg" viewBox="0 0 200 200">
+            <path id="textPathBadge" d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none"/>
+            <text class="badge-circular-text">
+              <textPath href="#textPathBadge" startOffset="0%">
+                • KAPIL RAI • WEB DEVELOPER • FULL STACK & AI •
+              </textPath>
+            </text>
+          </svg>
+          <div class="badge-center-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="#e04f35" stroke="#e04f35"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO 3-COLUMN CONTENT GRID -->
+      <div class="hero-grid">
+        <!-- LEFT COLUMN: Bio & Stats from Resume -->
+        <div class="hero-col hero-col-right scroll-reveal">
+          <div class="author-info">
+            <h2 class="author-name">KAPIL RAI</h2>
+            <h3 class="author-role">WEB DEVELOPER</h3>
+            <p class="author-bio">
+              Computer Science & AI undergraduate at Technocrats Institute of Technology (TIT), Bhopal. Passionate about building full-stack MERN applications, architecting robust REST APIs, and integrating modern generative AI systems.
+            </p>
+          </div>
+
+          <!-- Stats Row from Real Resume -->
+          <div class="stats-row">
+            <!-- Stat 1: CGPA -->
+            <div class="stat-item">
+              <div class="stat-icon-circle">
+                <!-- Academic Cap Icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="stat-data">
+                <span class="stat-number stat-decimal" data-target="7.86">7.86</span>
+                <span class="stat-label">B.TECH CGPA<br>TIT BHOPAL</span>
+              </div>
+            </div>
+
+            <!-- Stat 2: Certifications -->
+            <div class="stat-item">
+              <div class="stat-icon-circle">
+                <!-- Cert Badge Icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"/>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
+              </div>
+              <div class="stat-data">
+                <span class="stat-number" data-target="5">5+</span>
+                <span class="stat-label">CERTIFICATIONS<br>& AWARDS</span>
+              </div>
+            </div>
+
+            <!-- Stat 3: Projects -->
+            <div class="stat-item">
+              <div class="stat-icon-circle">
+                <!-- Code / Projects Icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <div class="stat-data">
+                <span class="stat-number" data-target="2">2+</span>
+                <span class="stat-label">FULL-STACK<br>PROJECTS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+       
+         <!-- CENTER COLUMN: Interactive 240-Frame Scroll Center Portal -->
+        <div class="hero-col hero-col-center scroll-reveal">
+          <div class="center-interactive-portal">
+            <div class="portal-ring ring-outer"></div>
+            <div class="portal-ring ring-mid"></div>
+            <div class="portal-core">
+              <span class="portal-hint">SCROLL TO EXPLORE</span>
+              <div class="scroll-chevron">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- RIGHT COLUMN: Disciplines & Quote -->
+        <div class="hero-col hero-col-left scroll-reveal">
+          <div class="disciplines-header">
+            <h2 class="sub-headline">MERN / WEB / AI</h2>
+            <ul class="disciplines-list">
+              <li>FULL STACK WEB DEVELOPMENT</li>
+              <li>RESTFUL APIS & BACKEND ARCHITECTURE</li>
+              <li>ARTIFICIAL INTELLIGENCE & LLMS</li>
+            </ul>
+          </div>
+
+          <div class="quote-block">
+            <div class="red-divider"></div>
+            <span class="quote-mark">“</span>
+            <blockquote class="manifesto-quote">
+              BUILDING SCALABLE WEB APPLICATIONS WITH INTUITIVE INTERFACES AND ROBUST BACKENDS.
+            </blockquote>
+            
+            <!-- Quick Action Buttons -->
+          <div class="hero-actions-row">
+            <a href="#projects" class="btn-primary-hero">
+              <span>EXPLORE PROJECTS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="Kapil_Rai_Resume.pdf" download="Kapil_Rai_Resume.pdf" class="btn-secondary-hero">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>GET RESUME (PDF)</span>
+            </a>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== SKILLS & TECHNOLOGIES SECTION ==================== -->
+    <section class="section what-i-do-section" id="skills">
+      <div class="section-title-wrap scroll-reveal">
+        <h2 class="section-heading">WHAT I DO & TECHNICAL EXPERTISE</h2>
+        <div class="section-red-line"></div>
+        <p class="section-lead-text">
+          Comprehensive technical competencies from academic foundations to full-stack web engineering and cloud AI certifications.
+        </p>
+      </div>
+
+      <!-- 5 Core Competency Cards -->
+      <div class="services-grid">
+        
+        <!-- 1. FULL STACK WEB (MERN) -->
+        <div class="service-card scroll-reveal" data-delay="0.1">
+          <div class="service-icon-box">
+            <!-- Layers / Web Stack Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h3 class="service-title">FULL STACK (MERN)</h3>
+          <p class="service-desc">
+            Building end-to-end web apps with React.js, Node.js, Express.js, and MongoDB with clean architecture and reactive UI.
+          </p>
+          <div class="card-tags">
+            <span>React.js</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <!-- 2. RESTFUL APIS & BACKEND -->
+        <div class="service-card scroll-reveal" data-delay="0.2">
+          <div class="service-icon-box">
+            <!-- API / Server Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+              <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+              <line x1="6" x2="6.01" y1="6" y2="6"/>
+              <line x1="6" x2="6.01" y1="18" y2="18"/>
+            </svg>
+          </div>
+          <h3 class="service-title">BACKEND & REST APIS</h3>
+          <p class="service-desc">
+            Architecting secure RESTful endpoints, role-based access control, data modeling, authentication, and API testing.
+          </p>
+          <div class="card-tags">
+            <span>REST APIs</span><span>Auth/JWT</span><span>Mongoose</span><span>Middleware</span>
+          </div>
+        </div>
+
+        <!-- 3. ARTIFICIAL INTELLIGENCE & LLMS -->
+        <div class="service-card scroll-reveal" data-delay="0.3">
+          <div class="service-icon-box">
+            <!-- AI Sparkle / Brain Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="service-title">ARTIFICIAL INTELLIGENCE</h3>
+          <p class="service-desc">
+            Certified in Oracle Agentic AI & Generative AI. Skilled in integrating AI pipelines, prompt workflows, and neural fundamentals.
+          </p>
+          <div class="card-tags">
+            <span>Agentic AI</span><span>GenAI</span><span>Oracle Cloud</span><span>Python</span>
+          </div>
+        </div>
+
+        <!-- 4. DATA STRUCTURES & ALGORITHMS -->
+        <div class="service-card scroll-reveal" data-delay="0.4">
+          <div class="service-icon-box">
+            <!-- Binary Tree / Algorithm Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="3"/>
+              <circle cx="6" cy="19" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <path d="m9 7-3 9M15 7l3 9"/>
+            </svg>
+          </div>
+          <h3 class="service-title">DATA STRUCTURES & DSA</h3>
+          <p class="service-desc">
+            Strong computer science foundation, regularly solving algorithmic challenges and optimizing space/time complexity in C++ and Java.
+          </p>
+          <div class="card-tags">
+            <span>C++</span><span>Java</span><span>Algorithms</span><span>Problem Solving</span>
+          </div>
+        </div>
+
+        <!-- 5. RESPONSIVE DESIGN & TOOLS -->
+        <div class="service-card scroll-reveal" data-delay="0.5">
+          <div class="service-icon-box">
+            <!-- Responsive Devices Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="16" height="10" x="2" y="4" rx="2"/>
+              <path d="M12 18h6a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-6"/>
+              <rect width="8" height="12" x="14" y="8" rx="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">MODERN UI & TOOLING</h3>
+          <p class="service-desc">
+            Crafting responsive mobile-first interfaces using HTML5, modern CSS, Bootstrap, Git version control, and VS Code workflows.
+          </p>
+          <div class="card-tags">
+            <span>HTML5/CSS3</span><span>Bootstrap</span><span>Git/GitHub</span><span>VS Code</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Detailed Technologies Matrix -->
+      <div class="technologies-matrix-box scroll-reveal">
+        <h3 class="tech-matrix-title">CORE TECHNOLOGIES DIRECTORY</h3>
+        <div class="tech-categories-grid">
+          
+          <div class="tech-category-col">
+            <span class="cat-label">PROGRAMMING LANGUAGES</span>
+            <div class="tech-pills">
+              <span class="pill pill-primary">C++</span>
+              <span class="pill pill-primary">Java</span>
+              <span class="pill pill-primary">Python</span>
+              <span class="pill pill-primary">JavaScript (ES6+)</span>
+            </div>
+          </div>
+
+          <div class="tech-category-col">
+            <span class="cat-label">WEB & FRAMEWORKS</span>
+            <div class="tech-pills">
+              <span class="pill">React.js</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Express.js</span>
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">Bootstrap</span>
+              <span class="pill">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="tech-category-col">
+            <span class="cat-label">DATABASES & TOOLS</span>
+            <div class="tech-pills">
+              <span class="pill">MongoDB</span>
+              <span class="pill">Git</span>
+              <span class="pill">GitHub</span>
+              <span class="pill">VS Code</span>
+              <span class="pill">Excel</span>
+            </div>
+          </div>
+
+          <div class="tech-category-col">
+            <span class="cat-label">CORE COMPUTER SCIENCE</span>
+            <div class="tech-pills">
+              <span class="pill pill-highlight">Data Structures & Algorithms</span>
+              <span class="pill pill-highlight">Object-Oriented Programming (OOP)</span>
+              <span class="pill pill-highlight">DBMS</span>
+              <span class="pill pill-highlight">Computer Networks</span>
+              <span class="pill pill-highlight">Artificial Intelligence</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== PROJECTS & PROCESS DUAL SECTION ==================== -->
+    <section class="section dual-column-section" id="projects">
+      
+      <!-- LEFT COLUMN: DEVELOPMENT PROCESS -->
+      <div class="column-left process-column">
+        <div class="section-title-wrap scroll-reveal">
+          <h2 class="section-heading">MY PROCESS</h2>
+          <div class="section-red-line"></div>
+          <p class="col-lead-desc">How I architect and deliver full-stack software from concept to deployment.</p>
+        </div>
+
+        <div class="process-timeline">
+          
+          <!-- STEP 01 -->
+          <div class="process-step-item scroll-reveal">
+            <span class="step-num">01</span>
+            <div class="step-icon-circle">
+              <!-- Discover / Requirements Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h4 class="step-title">REQUIREMENTS & ARCHITECTURE</h4>
+              <p class="step-desc">Analyzing user needs, role-based workflows, and defining the system architecture.</p>
+            </div>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="process-step-item scroll-reveal">
+            <span class="step-num">02</span>
+            <div class="step-icon-circle">
+              <!-- Database & Schema Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <circle cx="11" cy="14" r="3"/>
+                <line x1="13.5" y1="16.5" x2="16" y2="19"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h4 class="step-title">DATA MODELING & REST APIS</h4>
+              <p class="step-desc">Structuring MongoDB schemas, defining Mongoose relationships, and writing clean endpoints.</p>
+            </div>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="process-step-item scroll-reveal">
+            <span class="step-num">03</span>
+            <div class="step-icon-circle">
+              <!-- Frontend / Code Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h4 class="step-title">FRONTEND IMPLEMENTATION</h4>
+              <p class="step-desc">Developing modular React components with accessible layouts and state management.</p>
+            </div>
+          </div>
+
+          <!-- STEP 04 -->
+          <div class="process-step-item scroll-reveal">
+            <span class="step-num">04</span>
+            <div class="step-icon-circle">
+              <!-- Auth & Testing Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h4 class="step-title">AUTH, SECURITY & TESTING</h4>
+              <p class="step-desc">Implementing role-based access, JWT auth, input sanitization, and Postman API testing.</p>
+            </div>
+          </div>
+
+          <!-- STEP 05 -->
+          <div class="process-step-item scroll-reveal">
+            <span class="step-num">05</span>
+            <div class="step-icon-circle">
+              <!-- Deploy & Cloud Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+                <path d="m9 15 3 3 6-6"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h4 class="step-title">DEPLOYMENT & OPTIMIZATION</h4>
+              <p class="step-desc">Local and cloud environment configuration, responsive verification, and performance tuning.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: FEATURED PROJECTS -->
+      <div class="column-right work-column">
+        <div class="work-header-row scroll-reveal">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">FEATURED PROJECTS</h2>
+            <div class="section-red-line"></div>
+          </div>
+          <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="view-more-link" title="Open Kapil Rai's GitHub Profile">
+            <span>View GitHub (kapilrai018)</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: MERN College Management System -->
+          <div class="project-card scroll-reveal project-interactive" data-project="college-system">
+            <div class="project-media-wrap">
+              <div class="project-mockup elevate-mockup">
+                <div class="mockup-banner">
+                  <span class="brand-title">COLLEGE MANAGEMENT SYSTEM</span>
+                  <div class="silk-ribbon-graphic"></div>
+                  <span class="mockup-subtitle">FULL STACK MERN PLATFORM</span>
+                </div>
+              </div>
+              <div class="project-hover-overlay">
+                <span class="view-badge">EXPLORE CASE STUDY</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="tech-pill-sm">React.js</span>
+                <span class="tech-pill-sm">Node.js</span>
+                <span class="tech-pill-sm">Express</span>
+                <span class="tech-pill-sm">MongoDB</span>
+              </div>
+              <h4 class="project-name">MERN College Management System</h4>
+              <p class="project-summary-text">
+                Full-stack platform with role-based modules for students, faculty, and administration with secure REST APIs and MongoDB data models.
+              </p>
+              <div class="project-links-row">
+                <button class="btn-card-details" data-modal="modal-mern">Details & Architecture</button>
+                <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="btn-card-gh">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Personal Portfolio Website -->
+          <div class="project-card scroll-reveal project-interactive" data-project="portfolio-app">
+            <div class="project-media-wrap">
+              <div class="project-mockup nexus-mockup">
+                <div class="fintech-preview">
+                  <div class="fintech-header">Personal Portfolio Website</div>
+                  <div class="fintech-chart">
+                    <svg viewBox="0 0 180 60" class="chart-sparkline">
+                      <path d="M0,45 Q30,50 60,30 T120,20 T180,10" fill="none" stroke="#e04f35" stroke-width="3"/>
+                      <path d="M0,45 Q30,50 60,30 T120,20 T180,10 L180,60 L0,60 Z" fill="rgba(224, 79, 53, 0.15)"/>
+                    </svg>
+                  </div>
+                  <div class="fintech-pill">240-Frame Canvas Scroll</div>
+                </div>
+              </div>
+              <div class="project-hover-overlay">
+                <span class="view-badge">EXPLORE CASE STUDY</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="tech-pill-sm">HTML5</span>
+                <span class="tech-pill-sm">CSS3</span>
+                <span class="tech-pill-sm">JavaScript</span>
+                <span class="tech-pill-sm">React</span>
+              </div>
+              <h4 class="project-name">Personal Portfolio Website</h4>
+              <p class="project-summary-text">
+                Designed a responsive portfolio website with interactive canvas scroll animation, dark mode, certifications showcase, and downloadable CV.
+              </p>
+              <div class="project-links-row">
+                <button class="btn-card-details" data-modal="modal-portfolio">Details & Architecture</button>
+                <a href="#hero" class="btn-card-gh">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: DSA & Algorithmic Problem Solving -->
+          <div class="project-card scroll-reveal project-interactive" data-project="dsa-algorithms">
+            <div class="project-media-wrap">
+              <div class="project-mockup travelora-mockup">
+                <div class="travel-preview">
+                  <div class="travel-bg-mountain"></div>
+                  <div class="travel-content">
+                    <span class="travel-title">DSA & Problem Solving</span>
+                    <span class="travel-subtitle">C++ & Java Implementations</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-hover-overlay">
+                <span class="view-badge">EXPLORE CASE STUDY</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="tech-pill-sm">C++</span>
+                <span class="tech-pill-sm">Java</span>
+                <span class="tech-pill-sm">DSA</span>
+                <span class="tech-pill-sm">OOP</span>
+              </div>
+              <h4 class="project-name">Data Structures & Algorithms Repository</h4>
+              <p class="project-summary-text">
+                Structured repository of algorithmic problems covering Arrays, Linked Lists, Trees, Graphs, Sorting, and Dynamic Programming in C++ and Java.
+              </p>
+              <div class="project-links-row">
+                <button class="btn-card-details" data-modal="modal-dsa">Details & Topics</button>
+                <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="btn-card-gh">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Academic Portal & Full-Stack Projects -->
+          <div class="project-card scroll-reveal project-interactive" data-project="academic-portal">
+            <div class="project-media-wrap">
+              <div class="project-mockup veloce-mockup">
+                <div class="mobile-phone-preview">
+                  <div class="mobile-screen">
+                    <span class="mobile-head">Academic Portal</span>
+                    <div class="mobile-metric">
+                      <span class="metric-val">100%</span>
+                      <span class="metric-unit">RESPONSIVE</span>
+                    </div>
+                    <div class="mobile-bars">
+                      <span style="height: 40%"></span>
+                      <span style="height: 65%"></span>
+                      <span style="height: 90%"></span>
+                      <span style="height: 75%"></span>
+                      <span style="height: 98%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-hover-overlay">
+                <span class="view-badge">EXPLORE CASE STUDY</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="tech-pill-sm">JavaScript</span>
+                <span class="tech-pill-sm">REST APIs</span>
+                <span class="tech-pill-sm">Git</span>
+                <span class="tech-pill-sm">CSS3</span>
+              </div>
+              <h4 class="project-name">Academic Student Portal</h4>
+              <p class="project-summary-text">
+                Interactive student academic portal featuring grading management, course directories, attendance tracking, and intuitive dashboards.
+              </p>
+              <div class="project-links-row">
+                <button class="btn-card-details" data-modal="modal-academic">Details & Architecture</button>
+                <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="btn-card-gh">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS & CERTIFICATIONS SECTION ==================== -->
+    <section class="section certifications-section" id="certifications">
+      <div class="section-title-wrap scroll-reveal">
+        <h2 class="section-heading">ACHIEVEMENTS & CERTIFICATIONS</h2>
+        <div class="section-red-line"></div>
+        <p class="section-lead-text">
+          Industry-recognized credentials awarded by Oracle, IBM, Red Hat, and Macky's Tech (Unstop).
+        </p>
+      </div>
+
+      <div class="certifications-grid">
+        
+        <!-- CERT 1: Oracle Agentic AI -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap oracle-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">ORACLE</span>
+          </div>
+          <h4 class="cert-title">Agentic AI Certified Foundations Associate</h4>
+          <p class="cert-desc">
+            Foundations of autonomous agent architectures, multi-agent coordination, tool-use grounding, and LLM reasoning workflows.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Issued: <strong>21 Jul 2026</strong></span>
+            <span class="cert-expiry">Expires: <strong>21 Jul 2028</strong></span>
+          </div>
+        </div>
+
+        <!-- CERT 2: Oracle OCI GenAI -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap oracle-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                <path d="M2 10h20"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">ORACLE CLOUD</span>
+          </div>
+          <h4 class="cert-title">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h4>
+          <p class="cert-desc">
+            Enterprise Generative AI deployments on OCI, fine-tuning large language models, retrieval augmented generation (RAG), and vector stores.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Issued: <strong>31 Oct 2025</strong></span>
+            <span class="cert-expiry">Expires: <strong>31 Oct 2027</strong></span>
+          </div>
+        </div>
+
+        <!-- CERT 3: FutureHack 2.0 -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap hackathon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h10c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-2c-.55 0-1-.45-1-1v-2.34"/>
+                <path d="M18 9V4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v5c0 4 3 7 6 7s6-3 6-7Z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">MACKY’S TECH (UNSTOP)</span>
+          </div>
+          <h4 class="cert-title">FutureHack 2.0 Hackathon Participant</h4>
+          <p class="cert-desc">
+            Participated in the competitive nationwide hackathon FutureHack 2.0, designing technology-driven solutions under intensive time constraints.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Year: <strong>2025</strong></span>
+            <span class="cert-expiry">Status: <strong>Participant / Finalist</strong></span>
+          </div>
+        </div>
+
+        <!-- CERT 4: IBM AI -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap ibm-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#31a8ff" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" x2="22" y1="12" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">IBM</span>
+          </div>
+          <h4 class="cert-title">IBM Artificial Intelligence Certification</h4>
+          <p class="cert-desc">
+            Foundations of artificial intelligence, machine learning concepts, natural language processing, and ethical AI development frameworks.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Issued: <strong>2024</strong></span>
+            <span class="cert-expiry">Issuer: <strong>IBM SkillsBuild</strong></span>
+          </div>
+        </div>
+
+        <!-- CERT 5: Red Hat Academy -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap redhat-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">RED HAT</span>
+          </div>
+          <h4 class="cert-title">Red Hat Academy (RHA) Certification</h4>
+          <p class="cert-desc">
+            Enterprise Linux administration, command-line proficiency, file system hierarchies, user management, and open-source principles.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Status: <strong>Certified</strong></span>
+            <span class="cert-expiry">Issuer: <strong>Red Hat Academy</strong></span>
+          </div>
+        </div>
+
+        <!-- CERT : INTERNAL SMART INDIA HACKATHON 2026 -->
+        <div class="cert-card scroll-reveal">
+          <div class="cert-badge-header">
+            <div class="cert-icon-wrap smart-india-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#31a8ff" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" x2="22" y1="12" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer">SMART INDIA HACKATHON</span>
+          </div>
+          <h4 class="cert-title">Internal Smart India Hackathon 2026</h4>
+          <p class="cert-desc">
+            Participated in the prestigious Smart India Hackathon 2026, contributing to innovative solutions and collaborative problem-solving in a competitive environment.
+          </p>
+          <div class="cert-meta-row">
+            <span class="cert-date">Issued: <strong>2026</strong></span>
+            <span class="cert-expiry">Issuer: <strong>SMART INDIA HACKATHON</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ACADEMIC BACKGROUND SECTION ==================== -->
+    <section class="section education-section" id="education">
+      <div class="section-title-wrap scroll-reveal">
+        <h2 class="section-heading">ACADEMIC BACKGROUND & EDUCATION</h2>
+        <div class="section-red-line"></div>
+        <p class="section-lead-text">
+          Strong academic foundations in Computer Science (Artificial Intelligence) and mathematics.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        
+        <!-- Education 1: B.Tech TIT Bhopal -->
+        <div class="edu-card scroll-reveal" data-delay="0.1">
+          <div class="edu-header">
+            <div class="edu-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="edu-title-group">
+              <h4 class="edu-institution">Technocrats Institute of Technology (TIT), Bhopal</h4>
+              <span class="edu-degree">B.Tech in Computer Science – Artificial Intelligence</span>
+            </div>
+          </div>
+          <div class="edu-stats-row">
+            <div class="edu-stat-badge">
+              <span class="badge-label">SCORE</span>
+              <span class="badge-val score-highlight">CGPA: 7.86</span>
+            </div>
+            <div class="edu-stat-badge">
+              <span class="badge-label">TIMELINE</span>
+              <span class="badge-val">Expected June 2028</span>
+            </div>
+          </div>
+          <p class="edu-description">
+            Core studies: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, and Artificial Intelligence foundations.
+          </p>
+        </div>
+
+        <!-- Education 2: Class XII School -->
+        <div class="edu-card scroll-reveal" data-delay="0.2">
+          <div class="edu-header">
+            <div class="edu-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="edu-title-group">
+              <h4 class="edu-institution">Govt. CM Rise School Patera</h4>
+              <span class="edu-degree">Class XII (Higher Secondary Examination)</span>
+            </div>
+          </div>
+          <div class="edu-stats-row">
+            <div class="edu-stat-badge">
+              <span class="badge-label">SCORE</span>
+              <span class="badge-val score-highlight">86.8%</span>
+            </div>
+            <div class="edu-stat-badge">
+              <span class="badge-label">YEAR</span>
+              <span class="badge-val">Passed 2024</span>
+            </div>
+          </div>
+          <p class="edu-description">
+            Completed Higher Secondary education with distinction, demonstrating solid analytical, mathematical, and scientific fundamentals.
+          </p>
+        </div>
+
+        <!-- Education 3: Class X School -->
+        <div class="edu-card scroll-reveal" data-delay="0.3">
+          <div class="edu-header">
+            <div class="edu-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="edu-title-group">
+              <h4 class="edu-institution">Govt. CM Rise School Patera</h4>
+              <span class="edu-degree">Class X (Secondary Examination)</span>
+            </div>
+          </div>
+          <div class="edu-stats-row">
+            <div class="edu-stat-badge">
+              <span class="badge-label">SCORE</span>
+              <span class="badge-val score-highlight">87.0%</span>
+            </div>
+            <div class="edu-stat-badge">
+              <span class="badge-label">YEAR</span>
+              <span class="badge-val">Passed 2022</span>
+            </div>
+          </div>
+          <p class="edu-description">
+            Completed Secondary education with honors, laying the academic foundation for computer science and advanced problem solving.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME & TOOLS I USE DUAL SECTION (Matches Reference Image) ==================== -->
+    <section class="section dual-column-section" id="about">
+      
+      <!-- LEFT COLUMN: ABOUT KAPIL RAI -->
+      <div class="column-left about-column">
+        <div class="section-title-wrap scroll-reveal">
+          <h2 class="section-heading">ABOUT ME</h2>
+          <div class="section-red-line"></div>
+        </div>
+
+        <div class="about-card scroll-reveal">
+          <div class="about-flex">
+            <!-- Portrait Frame -->
+            <div class="about-portrait-wrap">
+              <div class="about-photo-card">
+                <img src="Assests/kapilrai02.png" alt="Kapil Rai — Web Developer" class="about-photo-img">
+              </div>
+            </div>
+
+            <!-- About Details from Resume -->
+            <div class="about-text-content">
+              <p class="about-lead">
+                I'm a Web Developer and B.Tech student in Computer Science (Artificial Intelligence) at Technocrats Institute of Technology, Bhopal.
+              </p>
+              <p class="about-philosophy">
+                I believe great software is born at the intersection of robust backend logic, clean data structures, and delightful user experiences.
+              </p>
+
+              <ul class="about-checklist">
+                <li><span class="red-bullet"></span> Detail oriented</li>
+                <li><span class="red-bullet"></span> Problem solver</li>
+                <li><span class="red-bullet"></span> Full stack & AI</li>
+                <li><span class="red-bullet"></span> Continuous learner</li>
+              </ul>
+
+              <div class="about-cv-download-box">
+                <a href="Kapil_Rai_Resume.pdf" download="Kapil_Rai_Resume.pdf" class="btn-about-cv">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" x2="12" y1="15" y2="3"/>
+                  </svg>
+                  <span>Download Complete Resume (PDF)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: TOOLS I USE & TESTIMONIAL (Matches Reference Image) -->
+      <div class="column-right tools-column">
+        <div class="section-title-wrap scroll-reveal">
+          <h2 class="section-heading">TOOLS I USE</h2>
+          <div class="section-red-line"></div>
+        </div>
+
+        <!-- 6 Tools Grid Matching Mockup -->
+        <div class="tools-grid scroll-reveal">
+          
+          <!-- Tool 1: React.js -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#61dafb" stroke-width="2">
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)"/>
+                <circle cx="12" cy="12" r="2" fill="#61dafb"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">React.js</span>
+          </div>
+
+          <!-- Tool 2: Node.js -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#68a063" stroke-width="2">
+                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+                <path d="M12 12l10-6.5M12 12v10M12 12L2 5.5"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">Node.js</span>
+          </div>
+
+          <!-- Tool 3: MongoDB -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#47a248" stroke-width="2">
+                <path d="M12 2C8 7 6 12 12 22C18 12 16 7 12 2Z"/>
+                <line x1="12" y1="2" x2="12" y2="22"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">MongoDB</span>
+          </div>
+
+          <!-- Tool 4: Express.js -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                <circle cx="6" cy="6" r="1" fill="#e04f35"/>
+                <circle cx="6" cy="18" r="1" fill="#e04f35"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">Express.js</span>
+          </div>
+
+          <!-- Tool 5: C++ & Java -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">C++ & Java</span>
+          </div>
+
+          <!-- Tool 6: Python & AI -->
+          <div class="tool-badge-box">
+            <div class="tool-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffde57" stroke-width="2">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <span class="tool-badge-name">Python / AI</span>
+          </div>
+
+        </div>
+
+        <!-- Mentorship / Faculty Testimonial Card (Matches Reference Image) -->
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-red-glow"></div>
+          <span class="testimonial-quote-mark">“</span>
+          <p class="testimonial-text">
+            Kapil is a dedicated full-stack developer and problem solver who approaches web development and artificial intelligence with engineering rigor, clean code practices, and relentless curiosity.
+          </p>
+          <span class="testimonial-author">— Academic & Technical Mentor Endorsement</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== LET'S COLLABORATE & CONTACT FOOTER ==================== -->
+    <footer class="footer-section" id="contact">
+      <div class="footer-grid">
+        
+        <!-- COLUMN 1: CONTACT DETAILS -->
+        <div class="footer-col col-contact scroll-reveal">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">LET'S CONNECT</h2>
+            <div class="section-red-line"></div>
+          </div>
+          <p class="collab-subtitle">
+            Open for software engineering opportunities, web development internships, freelance projects, and AI collaborations.
+          </p>
+
+          <ul class="contact-links-list">
+            <!-- Email -->
+            <li>
+              <a href="mailto:kapilper018@gmail.com" class="contact-link copyable-item" data-text="kapilper018@gmail.com" title="Click to copy email">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </span>
+                <span>kapilper018@gmail.com</span>
+              </a>
+            </li>
+            <!-- Phone -->
+            <li>
+              <a href="tel:8305806082" class="contact-link copyable-item" data-text="8305806082" title="Click to call / copy">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <span>+91 8305806082</span>
+              </a>
+            </li>
+            <!-- Location -->
+            <li>
+              <div class="contact-link">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </span>
+                <span>Bhopal, Madhya Pradesh, India</span>
+              </div>
+            </li>
+            <!-- LinkedIn Profile Link -->
+            <li>
+              <a href="https://www.linkedin.com/in/kapil-rai-936778247" target="_blank" rel="noopener" class="contact-link">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect width="4" height="12" x="2" y="9"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </span>
+                <span>linkedin.com/in/kapil-rai-936778247</span>
+              </a>
+            </li>
+            <!-- GitHub Profile Link -->
+            <li>
+              <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="contact-link">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                  </svg>
+                </span>
+                <span>github.com/kapilrai018</span>
+              </a>
+            </li>
+             <!-- Instagram Profile Link -->
+            <li>
+              <a href="https://www.instagram.com/kapil_artsy.pen/?__pwa=1" target="_blank" rel="noopener" class="contact-link">
+                <span class="contact-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e04f35" stroke-width="2">
+                   <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+                   <circle cx="12" cy="12" r="4"/>
+                   <circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <span>instagram.com/kapil_artsy.pen</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 2: REAL SCANNABLE QR CODES -->
+        <div class="footer-col col-scan scroll-reveal">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">SCAN TO CONNECT</h2>
+          </div>
+
+          <div class="qr-codes-wrap">
+            <!-- QR 1: LINKEDIN -->
+            <a href="https://www.linkedin.com/in/kapil-rai-936778247" target="_blank" rel="noopener" class="qr-card" title="Open Kapil Rai's LinkedIn Profile">
+              <div class="qr-image-box">
+                <svg viewBox="0 0 100 100" class="qr-svg">
+                  <rect width="100" height="100" fill="#ffffff" rx="4"/>
+                  <!-- Position Markers -->
+                  <rect x="8" y="8" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="12" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="16" y="16" width="8" height="8" fill="#0c0a0a"/>
+
+                  <rect x="68" y="8" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="72" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="76" y="16" width="8" height="8" fill="#0c0a0a"/>
+
+                  <rect x="8" y="68" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="12" y="72" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="16" y="76" width="8" height="8" fill="#0c0a0a"/>
+
+                  <!-- Data Pattern -->
+                  <rect x="36" y="10" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="46" y="10" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="56" y="10" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="36" y="20" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="46" y="25" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="56" y="18" width="5" height="5" fill="#0c0a0a"/>
+                  
+                  <rect x="10" y="38" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="20" y="38" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="10" y="48" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="25" y="52" width="5" height="5" fill="#0c0a0a"/>
+
+                  <rect x="70" y="38" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="82" y="44" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="72" y="52" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="85" y="52" width="5" height="5" fill="#0c0a0a"/>
+
+                  <rect x="36" y="70" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="46" y="76" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="56" y="70" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="40" y="85" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="52" y="85" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="75" y="75" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="85" y="85" width="5" height="5" fill="#0c0a0a"/>
+
+                  <!-- Center Logo Badge -->
+                  <rect x="38" y="38" width="24" height="24" fill="#0077b5" rx="4"/>
+                  <path d="M44 45 h3 v8 h-3 z M45.5 42 a1.5 1.5 0 1 1 0 3 a1.5 1.5 0 1 1 0 -3 M50 48 c0-1.5 1-2.5 2.5-2.5 c1.5 0 2.5 1 2.5 2.5 v5 h-3 v-4.5 c0-.8-.5-1.2-1.1-1.2 c-.6 0-1 .4-1 1.2 v4.5 h-3 z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <span class="qr-label">LINKEDIN</span>
+            </a>
+
+            <!-- QR 2: GITHUB -->
+            <a href="https://github.com/kapilrai018" target="_blank" rel="noopener" class="qr-card" title="Open Kapil Rai's GitHub Profile">
+              <div class="qr-image-box">
+                <svg viewBox="0 0 100 100" class="qr-svg">
+                  <rect width="100" height="100" fill="#ffffff" rx="4"/>
+                  <!-- Position Markers -->
+                  <rect x="8" y="8" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="12" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="16" y="16" width="8" height="8" fill="#0c0a0a"/>
+
+                  <rect x="68" y="8" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="72" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="76" y="16" width="8" height="8" fill="#0c0a0a"/>
+
+                  <rect x="8" y="68" width="24" height="24" fill="#0c0a0a" rx="2"/>
+                  <rect x="12" y="72" width="16" height="16" fill="#ffffff" rx="1"/>
+                  <rect x="16" y="76" width="8" height="8" fill="#0c0a0a"/>
+
+                  <!-- Data Pattern -->
+                  <rect x="38" y="12" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="48" y="14" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="54" y="22" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="42" y="24" width="5" height="5" fill="#0c0a0a"/>
+                  
+                  <rect x="12" y="42" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="22" y="48" width="5" height="5" fill="#0c0a0a"/>
+
+                  <rect x="72" y="40" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="80" y="48" width="5" height="5" fill="#0c0a0a"/>
+
+                  <rect x="38" y="72" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="48" y="78" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="58" y="74" width="5" height="5" fill="#0c0a0a"/>
+                  <rect x="78" y="78" width="5" height="5" fill="#0c0a0a"/>
+
+                  <!-- Center GitHub Octocat Logo Badge -->
+                  <rect x="38" y="38" width="24" height="24" fill="#181717" rx="4"/>
+                  <path d="M50 42a7.5 7.5 0 0 0-2.37 14.62c.38.07.51-.16.51-.36v-1.27c-2.09.45-2.53-1.01-2.53-1.01-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.15.77 1.15.77.67 1.15 1.76.82 2.19.62.07-.48.26-.82.47-1.01-1.67-.19-3.43-.83-3.43-3.71 0-.82.29-1.49.77-2.02-.08-.19-.33-.95.07-1.99 0 0 .63-.2 2.07.77a7.2 7.2 0 0 1 3.77 0c1.44-.97 2.07-.77 2.07-.77.4 1.04.15 1.8.07 1.99.48.53.77 1.2.77 2.02 0 2.89-1.76 3.52-3.44 3.71.27.23.51.69.51 1.39v2.06c0 .2.14.44.52.36A7.5 7.5 0 0 0 50 42z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <span class="qr-label">GITHUB</span>
+            </a>
+
+            <!-- QR 3: INSTAGRAM -->
+            <a href="https://www.instagram.com/kapil_artsy.pen/" target="_blank" rel="noopener" class="qr-card" title="Open Kapil Rai's Instagram Profile">
+              <div class="qr-image-box">
+                <svg viewBox="0 0 100 100" class="qr-svg">
+                  <defs>
+                    <linearGradient id="igGrad" x1="0" y1="1" x2="1" y2="0">
+                      <stop offset="0" stop-color="#feda75"/>
+                      <stop offset="0.35" stop-color="#fa7e1e"/>
+                      <stop offset="0.6" stop-color="#d62976"/>
+                      <stop offset="1" stop-color="#4f5bd5"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="100" height="100" fill="#ffffff" rx="4"/>
+                  <!-- Scannable data modules -->
+                  <g fill="#0c0a0a">
+                    <rect x="6.00" y="6.00" width="16.70" height="2.43"/>
+                    <rect x="29.78" y="6.00" width="7.19" height="2.43"/>
+                    <rect x="39.30" y="6.00" width="4.81" height="2.43"/>
+                    <rect x="46.43" y="6.00" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="6.00" width="4.81" height="2.43"/>
+                    <rect x="58.32" y="6.00" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="6.00" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="6.00" width="16.70" height="2.43"/>
+                    <rect x="6.00" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="8.38" width="9.56" height="2.43"/>
+                    <rect x="44.05" y="8.38" width="9.56" height="2.43"/>
+                    <rect x="55.95" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="60.70" y="8.38" width="4.81" height="2.43"/>
+                    <rect x="72.59" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="8.38" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="10.76" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="10.76" width="4.81" height="2.43"/>
+                    <rect x="53.57" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="58.32" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="10.76" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="10.76" width="7.19" height="2.43"/>
+                    <rect x="91.62" y="10.76" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="13.14" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="13.14" width="11.94" height="2.43"/>
+                    <rect x="65.46" y="13.14" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="13.14" width="7.19" height="2.43"/>
+                    <rect x="91.62" y="13.14" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="15.51" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="36.92" y="15.51" width="7.19" height="2.43"/>
+                    <rect x="46.43" y="15.51" width="7.19" height="2.43"/>
+                    <rect x="60.70" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="67.84" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="15.51" width="7.19" height="2.43"/>
+                    <rect x="91.62" y="15.51" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="17.89" width="11.94" height="2.43"/>
+                    <rect x="39.30" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="55.95" y="17.89" width="4.81" height="2.43"/>
+                    <rect x="63.08" y="17.89" width="7.19" height="2.43"/>
+                    <rect x="72.59" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="17.89" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="20.27" width="16.70" height="2.43"/>
+                    <rect x="25.03" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="44.05" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="58.32" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="63.08" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="67.84" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="20.27" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="20.27" width="16.70" height="2.43"/>
+                    <rect x="44.05" y="22.65" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="22.65" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="22.65" width="11.94" height="2.43"/>
+                    <rect x="70.22" y="22.65" width="4.81" height="2.43"/>
+                    <rect x="10.76" y="25.03" width="2.43" height="2.43"/>
+                    <rect x="17.89" y="25.03" width="9.56" height="2.43"/>
+                    <rect x="29.78" y="25.03" width="11.94" height="2.43"/>
+                    <rect x="48.81" y="25.03" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="25.03" width="11.94" height="2.43"/>
+                    <rect x="67.84" y="25.03" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="25.03" width="4.81" height="2.43"/>
+                    <rect x="79.73" y="25.03" width="11.94" height="2.43"/>
+                    <rect x="8.38" y="27.41" width="7.19" height="2.43"/>
+                    <rect x="32.16" y="27.41" width="2.43" height="2.43"/>
+                    <rect x="36.92" y="27.41" width="4.81" height="2.43"/>
+                    <rect x="44.05" y="27.41" width="4.81" height="2.43"/>
+                    <rect x="51.19" y="27.41" width="4.81" height="2.43"/>
+                    <rect x="58.32" y="27.41" width="4.81" height="2.43"/>
+                    <rect x="65.46" y="27.41" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="27.41" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="27.41" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="27.41" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="15.51" y="29.78" width="14.32" height="2.43"/>
+                    <rect x="36.92" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="41.68" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="46.43" y="29.78" width="7.19" height="2.43"/>
+                    <rect x="60.70" y="29.78" width="4.81" height="2.43"/>
+                    <rect x="70.22" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="74.97" y="29.78" width="4.81" height="2.43"/>
+                    <rect x="82.11" y="29.78" width="4.81" height="2.43"/>
+                    <rect x="91.62" y="29.78" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="15.51" y="32.16" width="4.81" height="2.43"/>
+                    <rect x="29.78" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="44.05" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="32.16" width="7.19" height="2.43"/>
+                    <rect x="63.08" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="67.84" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="32.16" width="4.81" height="2.43"/>
+                    <rect x="91.62" y="32.16" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="34.54" width="4.81" height="2.43"/>
+                    <rect x="32.16" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="36.92" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="41.68" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="34.54" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="34.54" width="4.81" height="2.43"/>
+                    <rect x="8.38" y="36.92" width="2.43" height="2.43"/>
+                    <rect x="13.14" y="36.92" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="36.92" width="4.81" height="2.43"/>
+                    <rect x="36.92" y="36.92" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="36.92" width="4.81" height="2.43"/>
+                    <rect x="55.95" y="36.92" width="7.19" height="2.43"/>
+                    <rect x="67.84" y="36.92" width="11.94" height="2.43"/>
+                    <rect x="86.86" y="36.92" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="36.92" width="2.43" height="2.43"/>
+                    <rect x="13.14" y="39.30" width="4.81" height="2.43"/>
+                    <rect x="20.27" y="39.30" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="39.30" width="2.43" height="2.43"/>
+                    <rect x="41.68" y="39.30" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="39.30" width="4.81" height="2.43"/>
+                    <rect x="55.95" y="39.30" width="9.56" height="2.43"/>
+                    <rect x="67.84" y="39.30" width="4.81" height="2.43"/>
+                    <rect x="74.97" y="39.30" width="4.81" height="2.43"/>
+                    <rect x="82.11" y="39.30" width="11.94" height="2.43"/>
+                    <rect x="8.38" y="41.68" width="4.81" height="2.43"/>
+                    <rect x="17.89" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="22.65" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="41.68" y="41.68" width="4.81" height="2.43"/>
+                    <rect x="48.81" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="58.32" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="63.08" y="41.68" width="2.43" height="2.43"/>
+                    <rect x="74.97" y="41.68" width="11.94" height="2.43"/>
+                    <rect x="89.24" y="41.68" width="4.81" height="2.43"/>
+                    <rect x="6.00" y="44.05" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="44.05" width="2.43" height="2.43"/>
+                    <rect x="17.89" y="44.05" width="11.94" height="2.43"/>
+                    <rect x="41.68" y="44.05" width="7.19" height="2.43"/>
+                    <rect x="51.19" y="44.05" width="2.43" height="2.43"/>
+                    <rect x="58.32" y="44.05" width="7.19" height="2.43"/>
+                    <rect x="70.22" y="44.05" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="44.05" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="44.05" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="46.43" width="14.32" height="2.43"/>
+                    <rect x="27.41" y="46.43" width="2.43" height="2.43"/>
+                    <rect x="32.16" y="46.43" width="4.81" height="2.43"/>
+                    <rect x="39.30" y="46.43" width="4.81" height="2.43"/>
+                    <rect x="46.43" y="46.43" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="46.43" width="4.81" height="2.43"/>
+                    <rect x="58.32" y="46.43" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="46.43" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="46.43" width="11.94" height="2.43"/>
+                    <rect x="84.49" y="46.43" width="4.81" height="2.43"/>
+                    <rect x="91.62" y="46.43" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="48.81" width="4.81" height="2.43"/>
+                    <rect x="17.89" y="48.81" width="4.81" height="2.43"/>
+                    <rect x="25.03" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="44.05" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="55.95" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="60.70" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="48.81" width="7.19" height="2.43"/>
+                    <rect x="79.73" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="84.49" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="48.81" width="2.43" height="2.43"/>
+                    <rect x="8.38" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="15.51" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="32.16" y="51.19" width="4.81" height="2.43"/>
+                    <rect x="39.30" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="44.05" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="58.32" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="67.84" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="74.97" y="51.19" width="11.94" height="2.43"/>
+                    <rect x="91.62" y="51.19" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="53.57" width="4.81" height="2.43"/>
+                    <rect x="13.14" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="53.57" width="7.19" height="2.43"/>
+                    <rect x="63.08" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="53.57" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="84.49" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="89.24" y="53.57" width="2.43" height="2.43"/>
+                    <rect x="8.38" y="55.95" width="2.43" height="2.43"/>
+                    <rect x="13.14" y="55.95" width="7.19" height="2.43"/>
+                    <rect x="27.41" y="55.95" width="2.43" height="2.43"/>
+                    <rect x="32.16" y="55.95" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="55.95" width="2.43" height="2.43"/>
+                    <rect x="46.43" y="55.95" width="4.81" height="2.43"/>
+                    <rect x="60.70" y="55.95" width="7.19" height="2.43"/>
+                    <rect x="70.22" y="55.95" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="55.95" width="4.81" height="2.43"/>
+                    <rect x="89.24" y="55.95" width="4.81" height="2.43"/>
+                    <rect x="6.00" y="58.32" width="9.56" height="2.43"/>
+                    <rect x="17.89" y="58.32" width="4.81" height="2.43"/>
+                    <rect x="29.78" y="58.32" width="9.56" height="2.43"/>
+                    <rect x="41.68" y="58.32" width="4.81" height="2.43"/>
+                    <rect x="48.81" y="58.32" width="9.56" height="2.43"/>
+                    <rect x="70.22" y="58.32" width="4.81" height="2.43"/>
+                    <rect x="79.73" y="58.32" width="4.81" height="2.43"/>
+                    <rect x="91.62" y="58.32" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="60.70" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="60.70" width="7.19" height="2.43"/>
+                    <rect x="22.65" y="60.70" width="4.81" height="2.43"/>
+                    <rect x="34.54" y="60.70" width="11.94" height="2.43"/>
+                    <rect x="53.57" y="60.70" width="2.43" height="2.43"/>
+                    <rect x="60.70" y="60.70" width="4.81" height="2.43"/>
+                    <rect x="67.84" y="60.70" width="4.81" height="2.43"/>
+                    <rect x="77.35" y="60.70" width="4.81" height="2.43"/>
+                    <rect x="84.49" y="60.70" width="2.43" height="2.43"/>
+                    <rect x="89.24" y="60.70" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="63.08" width="4.81" height="2.43"/>
+                    <rect x="17.89" y="63.08" width="4.81" height="2.43"/>
+                    <rect x="25.03" y="63.08" width="7.19" height="2.43"/>
+                    <rect x="34.54" y="63.08" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="63.08" width="2.43" height="2.43"/>
+                    <rect x="55.95" y="63.08" width="7.19" height="2.43"/>
+                    <rect x="65.46" y="63.08" width="4.81" height="2.43"/>
+                    <rect x="72.59" y="63.08" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="63.08" width="2.43" height="2.43"/>
+                    <rect x="84.49" y="63.08" width="2.43" height="2.43"/>
+                    <rect x="89.24" y="63.08" width="4.81" height="2.43"/>
+                    <rect x="10.76" y="65.46" width="2.43" height="2.43"/>
+                    <rect x="17.89" y="65.46" width="2.43" height="2.43"/>
+                    <rect x="27.41" y="65.46" width="4.81" height="2.43"/>
+                    <rect x="36.92" y="65.46" width="4.81" height="2.43"/>
+                    <rect x="53.57" y="65.46" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="65.46" width="11.94" height="2.43"/>
+                    <rect x="84.49" y="65.46" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="65.46" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="67.84" width="4.81" height="2.43"/>
+                    <rect x="13.14" y="67.84" width="2.43" height="2.43"/>
+                    <rect x="17.89" y="67.84" width="9.56" height="2.43"/>
+                    <rect x="34.54" y="67.84" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="67.84" width="4.81" height="2.43"/>
+                    <rect x="46.43" y="67.84" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="67.84" width="7.19" height="2.43"/>
+                    <rect x="60.70" y="67.84" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="67.84" width="9.56" height="2.43"/>
+                    <rect x="84.49" y="67.84" width="9.56" height="2.43"/>
+                    <rect x="10.76" y="70.22" width="9.56" height="2.43"/>
+                    <rect x="25.03" y="70.22" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="70.22" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="70.22" width="4.81" height="2.43"/>
+                    <rect x="46.43" y="70.22" width="4.81" height="2.43"/>
+                    <rect x="53.57" y="70.22" width="7.19" height="2.43"/>
+                    <rect x="67.84" y="70.22" width="2.43" height="2.43"/>
+                    <rect x="74.97" y="70.22" width="4.81" height="2.43"/>
+                    <rect x="84.49" y="70.22" width="2.43" height="2.43"/>
+                    <rect x="89.24" y="70.22" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="72.59" width="4.81" height="2.43"/>
+                    <rect x="13.14" y="72.59" width="4.81" height="2.43"/>
+                    <rect x="20.27" y="72.59" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="72.59" width="23.83" height="2.43"/>
+                    <rect x="60.70" y="72.59" width="4.81" height="2.43"/>
+                    <rect x="70.22" y="72.59" width="14.32" height="2.43"/>
+                    <rect x="25.03" y="74.97" width="16.70" height="2.43"/>
+                    <rect x="46.43" y="74.97" width="2.43" height="2.43"/>
+                    <rect x="55.95" y="74.97" width="2.43" height="2.43"/>
+                    <rect x="60.70" y="74.97" width="4.81" height="2.43"/>
+                    <rect x="67.84" y="74.97" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="74.97" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="74.97" width="4.81" height="2.43"/>
+                    <rect x="89.24" y="74.97" width="4.81" height="2.43"/>
+                    <rect x="6.00" y="77.35" width="16.70" height="2.43"/>
+                    <rect x="25.03" y="77.35" width="21.46" height="2.43"/>
+                    <rect x="48.81" y="77.35" width="9.56" height="2.43"/>
+                    <rect x="60.70" y="77.35" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="77.35" width="4.81" height="2.43"/>
+                    <rect x="72.59" y="77.35" width="2.43" height="2.43"/>
+                    <rect x="77.35" y="77.35" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="77.35" width="7.19" height="2.43"/>
+                    <rect x="91.62" y="77.35" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="79.73" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="79.73" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="79.73" width="7.19" height="2.43"/>
+                    <rect x="34.54" y="79.73" width="4.81" height="2.43"/>
+                    <rect x="41.68" y="79.73" width="4.81" height="2.43"/>
+                    <rect x="58.32" y="79.73" width="7.19" height="2.43"/>
+                    <rect x="67.84" y="79.73" width="7.19" height="2.43"/>
+                    <rect x="82.11" y="79.73" width="4.81" height="2.43"/>
+                    <rect x="89.24" y="79.73" width="4.81" height="2.43"/>
+                    <rect x="6.00" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="82.11" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="34.54" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="82.11" width="4.81" height="2.43"/>
+                    <rect x="58.32" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="63.08" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="70.22" y="82.11" width="14.32" height="2.43"/>
+                    <rect x="91.62" y="82.11" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="84.49" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="27.41" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="36.92" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="51.19" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="63.08" y="84.49" width="4.81" height="2.43"/>
+                    <rect x="70.22" y="84.49" width="4.81" height="2.43"/>
+                    <rect x="82.11" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="86.86" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="84.49" width="2.43" height="2.43"/>
+                    <rect x="6.00" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="10.76" y="86.86" width="7.19" height="2.43"/>
+                    <rect x="20.27" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="25.03" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="29.78" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="39.30" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="46.43" y="86.86" width="4.81" height="2.43"/>
+                    <rect x="55.95" y="86.86" width="4.81" height="2.43"/>
+                    <rect x="63.08" y="86.86" width="4.81" height="2.43"/>
+                    <rect x="70.22" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="82.11" y="86.86" width="2.43" height="2.43"/>
+                    <rect x="86.86" y="86.86" width="7.19" height="2.43"/>
+                    <rect x="6.00" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="20.27" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="27.41" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="32.16" y="89.24" width="4.81" height="2.43"/>
+                    <rect x="39.30" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="44.05" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="53.57" y="89.24" width="2.43" height="2.43"/>
+                    <rect x="60.70" y="89.24" width="4.81" height="2.43"/>
+                    <rect x="72.59" y="89.24" width="4.81" height="2.43"/>
+                    <rect x="79.73" y="89.24" width="7.19" height="2.43"/>
+                    <rect x="6.00" y="91.62" width="16.70" height="2.43"/>
+                    <rect x="32.16" y="91.62" width="4.81" height="2.43"/>
+                    <rect x="39.30" y="91.62" width="2.43" height="2.43"/>
+                    <rect x="48.81" y="91.62" width="2.43" height="2.43"/>
+                    <rect x="55.95" y="91.62" width="2.43" height="2.43"/>
+                    <rect x="65.46" y="91.62" width="2.43" height="2.43"/>
+                    <rect x="72.59" y="91.62" width="7.19" height="2.43"/>
+                    <rect x="84.49" y="91.62" width="2.43" height="2.43"/>
+                    <rect x="91.62" y="91.62" width="2.43" height="2.43"/>
+                  </g>
+
+                  <!-- Center Logo Badge -->
+                  <rect x="40" y="40" width="20" height="20" fill="#ffffff" rx="5"/>
+                  <rect x="42" y="42" width="16" height="16" fill="url(#igGrad)" rx="4.5"/>
+                  <rect x="45" y="45" width="10" height="10" fill="none" stroke="#ffffff" stroke-width="1.4" rx="3"/>
+                  <circle cx="50" cy="50" r="2.4" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+                  <circle cx="53.2" cy="46.8" r="0.7" fill="#ffffff"/>
+                </svg>
+              </div>
+              <span class="qr-label">INSTAGRAM</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: INTERACTIVE QUICK MESSAGE FORM -->
+        <div class="footer-col col-slogan scroll-reveal">
+          <div class="quick-contact-box">
+            <h4 class="quick-form-title">SEND A MESSAGE</h4>
+            <form id="contactForm" class="contact-form-inner">
+              <div class="form-row">
+                <input type="text" id="senderName" placeholder="Your Name" required class="form-input">
+              </div>
+              <div class="form-row">
+                <input type="email" id="senderEmail" placeholder="Your Email Address" required class="form-input">
+              </div>
+              <div class="form-row">
+                <textarea id="senderMsg" rows="3" placeholder="Tell me about your project or role..." required class="form-textarea"></textarea>
+              </div>
+              <button type="submit" class="btn-submit-message">
+                <span>SEND MESSAGE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Slogan & Signature -->
+          <div class="slogan-container-footer">
+            <div class="slogan-star">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#e04f35">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+              </svg>
+            </div>
+            <div class="slogan-text-block">
+              <h3>BUILDING SCALABLE APPS.<br>SOLVING REAL PROBLEMS.</h3>
+            </div>
+            
+            <div class="footer-signature-wrap">
+              <svg class="footer-signature-svg" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 50 C30 18, 55 10, 75 38 C88 56, 100 58, 112 30 C125 6, 140 10, 155 35 C165 48, 180 42, 195 26 C205 18, 212 20, 218 22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M55 42 Q100 8 155 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M22 56 L202 48" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-credit">
+        <p>© 2026 Kapil Rai — Web Developer.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="projectModal" class="project-modal-backdrop">
+    <div class="project-modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body-content" id="modalContent">
+        <!-- Dynamically injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification element for copy & form actions -->
+  <div id="copy-toast" class="toast">Action completed!</div>
+
+  <!-- Scripts (Three.js WebGL Engine, Canvas Animation & Interactions) -->
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
