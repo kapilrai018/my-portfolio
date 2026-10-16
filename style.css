@@ -639,6 +639,7 @@ body {
   flex: 1;
 }
 
+
 /* ===== MOBILE RESPONSIVE HERO FIX ===== */
 
 @media screen and (max-width: 768px) {
@@ -804,7 +805,7 @@ body {
         width: 125px;
         height: 125px;
     }
-  }
+}
 
 
 .hero-title-wrapper {
