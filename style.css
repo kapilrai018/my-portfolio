@@ -23,7 +23,7 @@
   --bg-pill: rgba(255, 255, 255, 0.04);
   
   --text-primary: #f5efe6;
-  --text-secondary: #9fc4c6e8;
+  --text-secondary: #b8c6c7e8;
   --text-muted: #f4b177e0;
   --text-footer:rgba(253, 93, 0, 0.604);
   
@@ -255,7 +255,7 @@ body {
 }
 
 .nav-item {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
   font-family: var(--font-title);
   font-size: 0.82rem;
@@ -304,7 +304,7 @@ body {
   font-family: var(--font-title);
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -782,7 +782,7 @@ body {
 
 /* ===== SMALL MOBILE SCREENS ===== */
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 340px) {
 
     .hero-section .hero {
  
